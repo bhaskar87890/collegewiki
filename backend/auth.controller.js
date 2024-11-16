@@ -50,7 +50,8 @@ export const signup = async(req,res) => {
         //         password:undefined,
         //     },
         // });
-        res.status(200).sendFile("backend/codeemail.html")
+       // res.status(200).sendFile("backend/codeemail.html")
+        res.status(200).sendFile(path.join(__dirname,'codeemail.html'));
 
     } catch (error){
         console.log(error);
@@ -89,7 +90,9 @@ export const verifyEmail = async(req,res) => {
            // }
         //})
        // res.status(200).sendFile("C:/Users/Bhaskar Samanta/Desktop/Projectnew/backend/examplehome.html");
-         res.status(200).sendFile("frontend2/Homepage.html");
+       //  res.status(200).sendFile("frontend2/Homepage.html");
+         res.status(200).sendFile(path.join(__dirname,'../frontend2/Homepage.html'));
+
 
 
 

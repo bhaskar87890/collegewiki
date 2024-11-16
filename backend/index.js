@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth',express.static(path.join(__dirname, '../frontend2')));
 
 app.use('/',express.static(path.join(__dirname,'../frontend2/Login_Sample_27')));
+//app.use('/',express.static(path.join(__dirname,'../backend')));
 
 app.use(express.json()); //allows us to handle requests with JSON payloads
 app.use(cookieParser()); //allows us to parse imcoming cookies
@@ -29,8 +30,13 @@ app.use(cookieParser()); //allows us to parse imcoming cookies
 app.use("/api/auth",authRoutes);
 
 app.get('/', (req,res)=>{
-    res.sendFile(path.join(__dirname,'../frontend2/Login_Sample_27/index.html'));
+  res.sendFile(path.join(__dirname,'../frontend2/Login_Sample_27/index.html'));
 })
+
+//app.get('/', (req,res)=>{
+    //res.sendFile(path.join(__dirname,'../backend/index2.html'));
+//})
+
 
 
 app.listen(PORT, () => {   // to connect the server

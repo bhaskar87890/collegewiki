@@ -13,7 +13,7 @@
 
     <div class="wrapper">
         <div class="form-wrapper sign-up">
-            <form action="http://localhost:5000/api/auth/signup" method ="post" id="sign">
+            <form action="/api/auth/signup" method ="post" id="sign">
                 <h2>Sign Up</h2>
                 <div class="input-group">
                     <input type="text" name="name" id="name" required>
@@ -29,13 +29,13 @@
                 </div>
                 <button type="submit" class="btn">Sign Up</button>
                 <div class="sign-link">
-                    <p>Already have an account? <a href="codeemail.html" class="signIn-link">Sign In</a></p>
+                    <p>Already have an account? <a href="./codeemail.html" class="signIn-link">Sign In</a></p>
                 </div>
             </form>
         </div>
 
         <div class="form-wrapper sign-in">
-            <form action="http://localhost:5000/api/auth/login" method="post">
+            <form action="/api/auth/login" method="post">
                 <h2>Login</h2>
                 <div class="input-group">
                     <input type="text" name="name" id ="name" required>
